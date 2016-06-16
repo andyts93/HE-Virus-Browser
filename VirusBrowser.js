@@ -25,7 +25,6 @@
                 if(ext == $('#virusType').val() || $('#virusType').val() === '')
                     return true;
             });
-            console.log('qui');
             create_list(filtered);
         });
     });
@@ -72,7 +71,6 @@
                 }
             });
         }
-        console.log(ip_virus);
         return ip_virus;
     }
 })();
