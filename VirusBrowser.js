@@ -32,7 +32,7 @@
     function create_list(ip_virus){
         var list = '<ul class="list ip" id="list">';
         ip_virus.forEach(function(virus){
-            list += '<li><span class="span4"><div class="list-ip"><a href="#"><span class="label pull-left '+(virus['tipo'] == 'VPC' ? 'label-success' : 'label-info')+'">'+virus['tipo']+'</span><span id="ip">'+virus['ip']+'</span></a></div></span><span class="span4"><div class="list-virus"><span class="he16-bug heicon icon-tab"></span><span id="vname">'+virus['virus']+'</span></div><div class="list-time"><span class="small">'+virus['tempo']+'</span></div></span><span class="span4">'+virus['internet']+'<br>'+virus['hd']+'</span><div style="clear:both"></div>'; 
+            list += '<li><span class="span4"><div class="list-ip"><a href="/internet?ip='+virus['ip']+'" target="_blank"><span class="label pull-left '+(virus['tipo'] == 'VPC' ? 'label-success' : 'label-info')+'">'+virus['tipo']+'</span><span id="ip">'+virus['ip']+'</span></a></div></span><span class="span4"><div class="list-virus"><span class="he16-bug heicon icon-tab"></span><span id="vname">'+virus['virus']+'</span></div><div class="list-time"><span class="small">'+virus['tempo']+'</span></div></span><span class="span4">'+virus['internet']+'<br>'+virus['hd']+'</span><div style="clear:both"></div>'; 
         });
         list += '</ul>';
         $('#virus-content').html(list);
